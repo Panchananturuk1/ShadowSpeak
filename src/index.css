@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #e2e8f0;
+  background: #020617;
+}
+
+@layer base {
+  * {
+    @apply border-slate-800;
+  }
+
+  body {
+    @apply min-h-screen bg-slate-950 text-slate-100;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  button {
+    @apply inline-flex items-center gap-2 transition duration-200;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply mt-3 w-full rounded-2xl border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-300;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .glass-panel {
+    @apply border border-white/10 bg-white/5 shadow-[0_24px_80px_rgba(15,23,42,0.35)] backdrop-blur-xl;
+  }
+
+  .pill-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-cyan-300 px-5 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-slate-950 hover:bg-cyan-200;
+  }
+
+  .pill-secondary {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-white hover:bg-white/10;
+  }
+
+  .field-shell {
+    @apply rounded-[24px] border border-white/10 bg-white/5 p-4 text-xs uppercase tracking-[0.2em] text-slate-400;
+  }
+}
